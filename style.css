@@ -4,12 +4,16 @@
 :root {
   --background_display: #ECF2F8;
   --background_article: #FFFFFF;
+  --color-card-header: hsl(217, 19%, 35%);
+  --color-card-body: hsl(214, 17%, 51%);
 }
+
 html, body {
   height: 100%;
   width: 100%;
   background: var(--background_display);
   font-size: 13px;
+  font-family: Manrope;
 }
 body {
   margin: 0;
@@ -27,7 +31,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 0 auto;
+  flex: 1 0 auto;  
 }
 
 article {
@@ -35,23 +39,48 @@ article {
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  flex-shrink: 30% 70%;
   background-color: var(--background_article);
   overflow: hidden;
+}
 
+.card {
   border-radius: 10px;
   height: 280px;
   width: 730px;  
-}
-
-.shades-article {
   -webkit-box-shadow: 0px 40px 40px -10px rgba(201,213,225,1);
   -moz-box-shadow: 0px 40px 40px -10px rgba(201,213,225,1);
   box-shadow: 0px 40px 40px -10px rgba(201,213,225,1);
+
 }
 
 img {  
   max-width: 350px;
   max-height: 524px;  
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header {
+  /* width: 365px; */
+  /* height: 84px; */
+  /* margin: 32px 40px 32px 0px; */
+  font-weight: 700;
+  font-size: 20px;
+  font-stretch: 0.25;
+  line-height: 1.4;
+  color: var(--color-card-header);
+}
+
+.card-body {
+  font-weight: 500;
+  line-height: 1.538;
+  color: var(--color-card-body);
 }
 
 .attribution{
